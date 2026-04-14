@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noticia sobre el reclamo del gobernador Llaryora por las prestaciones del PAMI en Córdoba.">
+    <meta name="author" content="La Nación">
+    <title>Llaryora reclamó por el PAMI - La Nación</title>
+    
+    <style>
+        footer {
+            text-align: center;  
+            margin-top: 40px;   
+            padding: 20px;      
+        }
+        
+        .social-links {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <header>
+                <h1>El cordobés Llaryora reclamó por el PAMI: "No se escondan más, pongan la cara y los recursos"</h1>
+                <h2>En Córdoba hay quejas de los jubilados y los prestadores por demoras en la atención y los pagos; por esa razón, el gobernador salió a cuestionar a la gestión de Milei</h2>
+                
+                <p>Por <a href="https://www.lanacion.com.ar/politica/el-cordobes-llaryora-reclamo-por-el-pami-no-se-escondan-mas-pongan-la-cara-y-los-recursos-nid13042026/">La Nacion</a> | <time id="fecha-articulo"></time></p>
+            </header>
+            
+            <section>
+                <figure>
+                    <img src="https://www.lanacion.com.ar/resizer/v2/el-gobernador-de-cordoba-martin-WNJH77T27VELZBAD4Y3EAS4NNQ.jpg?auth=327cf088e1e2bf7bd40ce1da4480af67e685c133fe0f331d1b42ddaa18197659&width=420&height=280&quality=70&smart=true" alt="Martín Llaryora, gobernador de Córdoba">
+                    <figcaption>Martín Llaryora, gobernador de Córdoba, durante un acto oficial.</figcaption>
+                </figure>
+
+                <p>El gobernador Martín Llaryora apuntó directamente a las autoridades del PAMI ante el conflicto por las prestaciones que afecta a los jubilados en la provincia de Córdoba. "No se escondan más, pongan la cara y los recursos", exigió el mandatario al referirse a la situación actual.</p>
+                
+                <h2>Preocupación por las prestaciones</h2>
+                <p>El reclamo surge a raíz de las deudas acumuladas y los inconvenientes en la atención médica, lo que ha generado un fuerte malestar en el sector y derivó en medidas de fuerza.</p>
+                
+                <p>Desde la provincia esperan una pronta regularización de los pagos para evitar que la situación se siga agravando y garantizar el servicio a los afiliados.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <nav aria-label="Navegación del pie de página">
+            <a href="/privacidad">Política de privacidad</a> |
+            <a href="/terminos">Términos de uso</a> |
+            <a href="/cookies">Política de cookies</a>
+        </nav>
+        
+        <small>&copy; <span id="anio-actual"></span> La Nación. Todos los derechos reservados.</small>
+        
+        <div class="social-links">
+            <a href="https://twitter.com/ejemplo" aria-label="Twitter">Twitter</a>
+            <a href="https://facebook.com/ejemplo" aria-label="Facebook">Facebook</a>
+            <a href="https://instagram.com/ejemplo" aria-label="Instagram">Instagram</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('¡La página ha cargado completamente!');
+            
+            document.getElementById('anio-actual').textContent = new Date().getFullYear();
+            
+            const hoy = new Date();
+            const fechaISO = hoy.toISOString().split('T')[0];
+            const fechaLegible = hoy.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
+            const timeEl = document.getElementById('fecha-articulo');
+            timeEl.setAttribute('datetime', fechaISO);
+            timeEl.textContent = fechaLegible;
+            
+            const titulo = document.querySelector('h1');
+            titulo.addEventListener('click', function() {
+                alert('¡Has hecho clic en el título!');
+            });
+        });
+    </script>
+</body>
+</html>
