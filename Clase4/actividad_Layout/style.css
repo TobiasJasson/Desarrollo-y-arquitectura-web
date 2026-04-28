@@ -5,28 +5,27 @@ body {
 }
 
 #contenedor {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
+    width: 100%;
 }
 
-#cabecera, #pie {
+#cabecera {
     display: none;
 }
-
-.cuerpo-principal {
-    display: flex;
-    flex-direction: row-reverse; 
-    flex: 1;
-} 
-
 
 #menu {
+    float: right;
     display: none;
 }
+
 
 #contenido {
     background-color: #e2e2e2;
-    flex: 1;
+    width: 75%;
+    float: left;
     padding: 20px;
+    box-sizing: border-box;
+}
+
+#pie {
+    display: none;
 }
