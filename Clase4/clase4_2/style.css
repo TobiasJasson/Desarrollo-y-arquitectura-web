@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#contenedor {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#cabecera {
+    background-color: #eaeaea;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.img-banner {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto 0;
+}
+
+.cuerpo-principal {
+    display: flex;
+}
+
+#menu {
+    width: 25%;
+    background-color: #fafafa;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+#menu ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#menu a {
+    color: #333;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+#contenido {
+    width: 75%;
+    padding: 30px;
+}
+
+#pie {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+}
+
+#pie a {
+    color: #80c1ff;
+}
+
+.titulo-articulo {
+    background-color: #d3d3d3;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 0;
+}
+
+.link-juego {
+    color: #0055ff;
+    text-decoration: underline wavy red; 
+}
+
+.fondo-verde {
+    background-color: #00ff00;
+    color: black;
+}
+
+.texto-naranja {
+    color: #c45b12;
+}
+
+.fondo-amarillo {
+    background-color: #ffff00;
+}
+
+.texto-rojo {
+    color: #cc0000;
+}
+
+.fondo-celeste {
+    background-color: #00ffff;
+}
+
+.subrayado-rojo {
+    text-decoration: underline wavy red; 
+}
