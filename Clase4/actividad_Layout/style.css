@@ -1,0 +1,32 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+#cabecera, #pie {
+    display: none;
+}
+
+.cuerpo-principal {
+    display: flex;
+    flex-direction: row-reverse; 
+    flex: 1;
+} 
+
+
+#menu {
+    display: none;
+}
+
+#contenido {
+    background-color: #e2e2e2;
+    flex: 1;
+    padding: 20px;
+}
