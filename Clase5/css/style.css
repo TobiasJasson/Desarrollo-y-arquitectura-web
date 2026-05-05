@@ -1,0 +1,36 @@
+body {
+    padding-top: 56px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.bg-purple {
+    background-color: #6f42c1;
+}
+
+.text-purple {
+    color: #6f42c1;
+}
+
+#inicio {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    #inicio {
+        min-height: auto;
+        padding-top: 2rem;
+    }
+}
