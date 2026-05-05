@@ -10,6 +10,21 @@ section {
     background-color: #6f42c1;
 }
 
+.bg-flutter {
+    background-color: #02569B;
+}
+.text-flutter {
+    color: #02569B;
+}
+
+.bg-python {
+    background-color: #306998;
+}
+.text-python {
+    color: #306998;
+}
+
+
 .text-purple {
     color: #6f42c1;
 }
