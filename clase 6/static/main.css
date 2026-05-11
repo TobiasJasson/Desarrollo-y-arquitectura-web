@@ -1,0 +1,14 @@
+main {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+article {
+    width: 75%;
+    padding: 1rem;
+}
+    
