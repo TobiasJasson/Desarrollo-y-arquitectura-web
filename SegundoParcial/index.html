@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Paneles Solares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Calculadora de Paneles Solares</h1>
+    <p>Determiná la potencia del campo solar o la superficie de tejado según el consumo que quieras compensar.</p>
+
+    <h2>¿Qué deseás calcular?</h2>
+    <label><input type="radio" name="tipo" value="campo" checked> Tamaño del campo solar</label>
+    <label><input type="radio" name="tipo" value="tejado"> Superficie de tejado necesaria</label>
+
+    <form id="form">
+      <label>Consumo anual (kWh)<input type="number" id="consumo"></label>
+      <label>Compensación (%)<input type="number" id="compensacion"></label>
+      <label>Factor medioambiental (%)<input type="number" id="factor"></label>
+      <label>Horas solares por día<input type="number" id="horas"></label>
+      <label>Días al año<input type="number" id="dias" value="365"></label>
+      <label class="tejado">Potencia por panel (kW)<input type="number" id="potencia"></label>
+      <label class="tejado">Superficie por panel (m²)<input type="number" id="superficie"></label>
+
+      <p id="error"></p>
+      <button type="submit">Calcular</button>
+      <button type="button" id="limpiar">Limpiar</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

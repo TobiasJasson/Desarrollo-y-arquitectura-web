@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Dimensionamiento Fotovoltaico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor-calculadora">
+        <header>
+            <h1>Dimensionamiento de Sistemas Fotovoltaicos</h1>
+            <p>Plataforma técnica para el cálculo preciso de potencia del campo solar y área física de captación residencial.</p>
+        </header>
+
+        <form id="formulario-solar">
+            <div class="grupo-formulario">
+                <label for="tipoCalculo">Seleccione el tipo de análisis requerido:</label>
+                <select id="tipoCalculo" required>
+                    <option value="" disabled selected>Seleccione una opción de ingeniería...</option>
+                    <option value="campo">Potencia Estimada del Campo Solar (kW)</option>
+                    <option value="tejado">Superficie Total de Tejado Necesaria (m²)</option>
+                </select>
+            </div>
+
+            <div id="campos-dinamicos" class="oculto">
+                <fieldset>
+                    <legend>Variables Generales de Entrada</legend>
+                    
+                    <div class="grupo-formulario">
+                        <label for="consumoAnual">Consumo anual acumulado (kWh):</label>
+                        <input type="number" id="consumoAnual" placeholder="Ej: 1000" min="0.1" step="0.1">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="porcentajeCompensacion">Porcentaje de compensación energética solicitado (%):</label>
+                        <input type="number" id="porcentajeCompensacion" placeholder="Ej: 90" min="1" max="100">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="factorMedioambiental">Factor medioambiental de rendimiento operativo (%):</label>
+                        <input type="number" id="factorMedioambiental" placeholder="Ej: 85" min="1" max="100">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="horasSolares">Horas de sol pico diarias promedio (HSP):</label>
+                        <input type="number" id="horasSolares" placeholder="Ej: 8" min="1" max="24" step="0.1">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="diasAno">Período de cómputo anual (días):</label>
+                        <input type="number" id="diasAno" value="365" min="1" max="366">
+                    </div>
+                </fieldset>
+
+                <div id="campos-tejado" class="oculto">
+                    <fieldset>
+                        <legend>Especificaciones Técnicas del Módulo Fotovoltaico</legend>
+                        <div class="grupo-formulario">
+                            <label for="potenciaPanel">Potencia nominal unitaria por panel (kW):</label>
+                            <input type="number" id="potenciaPanel" placeholder="Ej: 0.3" min="0.01" step="0.01">
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="superficiePanel">Superficie física total por panel (m²):</label>
+                            <input type="number" id="superficiePanel" placeholder="Ej: 1.4" min="0.1" step="0.1">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="grupo-botones">
+                    <button type="button" id="btn-calcular" class="btn btn-principal">Ejecutar Cálculo</button>
+                    <button type="button" id="btn-limpiar" class="btn btn-secundario">Restablecer Parámetros</button>
+                </div>
+            </div>
+
+            <div id="bloque-error" class="mensaje error oculto"></div>
+            <div id="bloque-resultado" class="mensaje exito oculto"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
